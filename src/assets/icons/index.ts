@@ -1,6 +1,6 @@
 export { default as IconAdd } from './Add.svg?react';
-export { default as IconAlert } from './icon-Alert.svg?react';
-export { default as IconArrowLeftCircle } from './icon-ArrowLeftCircle.svg?react';
+export { default as IconAlert } from './Alert.svg?react';
+export { default as IconArrowLeftCircle } from './ArrowLeftCircle.svg?react';
 export { default as IconCertificate } from './Certificate.svg?react';
 export { default as IconCheck } from './Check.svg?react';
 export { default as IconCommunity } from './Community.svg?react';

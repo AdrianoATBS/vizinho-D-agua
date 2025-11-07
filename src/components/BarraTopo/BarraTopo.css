@@ -1,0 +1,24 @@
+.barra-topo-container {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.barra-topo-botao-icone
+{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.barra-topo-titulo {
+  flex-grow: 1;
+  text-align: center;
+  font-size: var(--fs-base);
+  font-family: var(--font-poppins);
+  font-weight: var(--font-weight-semibold);
+
+}
