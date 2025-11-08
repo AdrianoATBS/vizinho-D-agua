@@ -7,7 +7,7 @@ export default function NavBar() {
             <nav className="nav-bar-container">
                 <ul>
                     <li>
-                        <NavLink to="home" className="nav-link">
+                        <NavLink to="/" className="nav-link">
                             <IconHouse />
                             <span>Alerta</span>
                         </NavLink>
