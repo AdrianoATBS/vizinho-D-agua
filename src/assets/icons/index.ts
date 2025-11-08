@@ -15,3 +15,5 @@ export { default as IconMagnifyingGlass } from './MagnifyingGlass.svg?react';
 export { default as IconMegaphone } from './Megaphone.svg?react';
 export { default as IconUserCircle } from './UserCircle.svg?react';
 export { default as IconUsersThree } from './UsersThree.svg?react';
+export { default as IconAttentionColor } from './AttentionColor.svg?react';
+export { default as IconCheckColor } from './CheckColor.svg?react';

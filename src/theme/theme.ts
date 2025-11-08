@@ -14,7 +14,7 @@ export const theme = {
     },
     typography:{
         fontFamily: "'Poppins', sans-serif",
-        body: "'Corpo', sans-serif",
+        body: "'Darker Grotesque', sans-serif",
     },
     fontSizes: {
         xxxl: "3.812rem", // 61px
