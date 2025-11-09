@@ -4,7 +4,7 @@ import CardAlerta from "../../components/CardAlerta/CardAlerta";
 import { mockAlertas } from "../../mocks/alertas.mock";
 function Home() {
   return (
-    <div className="app-container">
+    <>
         <BarraTopo 
           title="Alertas"
           iconType="menu"
@@ -21,7 +21,7 @@ function Home() {
           ))}
         </div>
          
-    </div>
+    </>
   );
 }
 export default Home;

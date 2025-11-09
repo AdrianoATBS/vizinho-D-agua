@@ -1,0 +1,55 @@
+.card-denuncia-container{
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.card-denuncia-titulo{
+    font-family: var(--font-poppins);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--fs-base);
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+
+.card-denuncia-info{
+    font-family: var(--font-dark-grotesque);
+    font-size: var(--fs-xs);
+    color: var(--color-bg-dark-gray);
+    margin-bottom: 12px;
+    display: block;
+}
+
+.card-denuncia-footer
+{
+    display: flex;
+    align-items: center;
+}
+
+.card-denuncia-status{
+    font-family: var(--font-poppins);
+    font-size: var(--fs-xs);
+    font-weight: var(--font-weight-medium);
+    padding: 4px 12px;
+    border-radius: 16px;
+}
+.card-denuncia-link{
+    font-family: var(--font-poppins);
+    font-weight:  var(--font-weight-semibold);
+    font-size: var(--fs-xs);
+    color: var(--color-primary);
+    text-decoration: underline;
+    margin-left: 24px
+}
+
+.status-em-andamento{
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.status-processada{
+    color: var(--color-bg-dark-gray);
+   
+}
