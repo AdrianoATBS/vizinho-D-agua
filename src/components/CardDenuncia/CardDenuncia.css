@@ -41,7 +41,7 @@
     font-size: var(--fs-xs);
     color: var(--color-primary);
     text-decoration: underline;
-    margin-left: 24px
+    margin-left: 24px;
 }
 
 .status-em-andamento{

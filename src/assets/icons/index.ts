@@ -17,3 +17,5 @@ export { default as IconUserCircle } from './UserCircle.svg?react';
 export { default as IconUsersThree } from './UsersThree.svg?react';
 export { default as IconAttentionColor } from './AttentionColor.svg?react';
 export { default as IconCheckColor } from './CheckColor.svg?react';
+export { default as IconArrowDown } from './ArrowDown.svg?react';
+export { default as IconPlay } from './Play.svg?react';
