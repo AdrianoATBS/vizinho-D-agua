@@ -15,9 +15,11 @@
     font-size: var(--fs-xs);
     color: var(--color-bg-dark-gray);
     cursor: pointer;
-    transtion: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    box-shadow: ;
 }
 .aba-item.ativa{
     background-color: var(--color-primary);
     color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }

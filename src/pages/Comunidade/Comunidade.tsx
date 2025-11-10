@@ -1,7 +1,44 @@
+
+import Abas from "../../components/abas/abas";
+import BarraTopo from "../../components/BarraTopo/BarraTopo";
+import Busca from "../../components/Busca/Busca";
+import { useState } from "react";
+import { mockComunidades, type Comunidade } from "../../mocks/comunidades.mock";
+import CardComunidade from "../../components/CardComunidade/CardComunidade";
+
 export default function Comunidade() {
+    const abasDaPagina = ["Explorar", "Seguindo"];
+    const[abaAtiva, setAbaAtiva] = useState(abasDaPagina[0]);
+
+    const comunidadadesFiltradas = mockComunidades.filter((comunidade: Comunidade) => {
+        if (abaAtiva === "Explorar") {
+            return !comunidade.isSeguindo;
+        } else if (abaAtiva === "Seguindo") {
+            return comunidade.isSeguindo;
+        }
+    });
+
     return (
-        <div>
-            <h1>Página da Comunidade</h1>
-        </div>
+        <>
+            <BarraTopo
+            title="Comunidades"
+            iconType="menu" />
+            <Busca placeholder="Buscar por uma comunidade" />
+            <Abas listaDeAbas={abasDaPagina}
+            abaAtiva={abaAtiva}
+            onAbaClick={setAbaAtiva} />
+            <div className="lista-comunidades-container">
+                {comunidadadesFiltradas.map(comunidade =>
+                    <CardComunidade
+                        key={comunidade.id}
+                        title={comunidade.title}
+                        description={comunidade.description}
+                        image={comunidade.coverImage}
+                        membros={comunidade.membros}
+                    />
+                )}
+                  
+            </div>
+        </>
     );
 }
