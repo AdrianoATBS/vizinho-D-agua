@@ -8,6 +8,7 @@ import Botao from "../../components/Botao/Botao";
 import { mockDenuncias } from "../../mocks/denuncias.mock";
 import FormularioTexto from "../../components/Formulario/FormularioTexto";
 import { IconAnexo } from "../../assets/icons";
+import './EditarDenuncia.css'
 type DadosDenuncia ={
     reportType: string;
     location: string;
@@ -98,21 +99,21 @@ export default function EditarDenuncia() {
             <div className="formulario-grupo">
                 <label className="formulario-label">Anexos: </label>
 
-                {dadosDenuncia.anexo.length > 0 ? (
-                    <div className="anexo-galeria">
-                        {dadosDenuncia.anexo.map((anexoUrl, index) => (
-                            <img 
-                            key={index} 
-                            src={`/${anexoUrl}`} 
-                            alt={`Anexo ${index + 1}`} 
-                            className="anexo-imagem-item"/>
-                        ))}
-                    </div>
-                ) : (
-                    <div className="anexo-placeholder">
+                <div className="anexo-placeholder">
+                    {dadosDenuncia.anexo.length > 0 ? (
+                        <div className="anexo-galeria">
+                            {dadosDenuncia.anexo.map((anexoUrl, index) => (
+                                <img 
+                                key={index} 
+                                src={`/${anexoUrl}`} 
+                                alt={`Anexo ${index + 1}`} 
+                                className="anexo-imagem-item"/>
+                            ))}
+                        </div>
+                    ) : (
                         <IconAnexo />
-                    </div>
-                )}
+                    )}
+                </div>
             </div>
             
             <div className="formulario-botoes-footer">
