@@ -60,7 +60,7 @@ export default function EditarDenuncia() {
 
     return(
         <>
-        <BarraTopo title="Editar Denúncia" iconType="volta" />
+        <BarraTopo title="Denúncia" iconType="volta" />
 
         <form className="formulario-container" onSubmit={handleEnviar}>
             <Formulario

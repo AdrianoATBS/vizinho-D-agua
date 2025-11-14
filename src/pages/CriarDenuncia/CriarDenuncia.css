@@ -48,7 +48,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 24px;   
+    margin-top: 24px;
+    margin-right: -10px;
+    margin-left: -5px;
 }
 
 .botao-cancelar{
@@ -60,6 +62,7 @@
     font-weight: var(--font-weight-medium);
     font-size: var(--fs-base);
     color: var(--color-text);
+    margin-left: 10px;
 }
 
 .formulario-botoes-footer .botao-container{

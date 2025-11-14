@@ -12,7 +12,7 @@ import LayoutPrincipal from "./components/LayoutPrincipal/LayoutPrincipal";
 import SucessoDenuncia from "./pages/SucessoDenuncia/SucessoDenuncia";
 import EditarDenuncia from "./pages/EditarDenuncia/EditarDenuncia";
 import SucessoEditar from "./pages/SucessoEditar/SucessoEditar";
-
+import Contatos from "./pages/Contatos/Contato";
 function App() {
   return (
     <>
@@ -26,6 +26,7 @@ function App() {
           <Route path="/dicas" element={<Educacional />} />
           <Route path="/criar-denuncia" element={<CriarDenuncia />}></Route>
           <Route path="/editar-denuncia/:id" element={<EditarDenuncia />}></Route>
+          <Route path="/contatos" element={<Contatos />}></Route>
         </Route>
 
 

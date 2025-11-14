@@ -32,6 +32,7 @@
     color: var(--color-text);
     text-align: center;
     flex-grow: 1;
+    border-bottom: 2px solid var(--color-bg-light-gray);
 }
 
 .modal-botao-fechar{
@@ -51,19 +52,20 @@
     font-size: var(--fs-base);
     color: var(--color-text);
     display: block;
-    margin-bottom: 4px;
+    margin-top: 25px;
 }
 
 .modal-grupo p{
-    font-family: var(--font-dark-grotesque);
+    font-family: var(--font-darker-grotesque);
     font-size: var(--fs-base);
     color: var(--color-bg-dark-gray);
-   
+    margin-top: 4px;
 }
 
 .modal-anexos{
     display: flex;
     gap: 8px;
+    margin-top: 8px;
 }
 .modal-anexos img{
     width: 80px;

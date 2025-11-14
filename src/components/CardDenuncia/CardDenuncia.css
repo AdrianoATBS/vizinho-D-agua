@@ -16,8 +16,8 @@
 
 
 .card-denuncia-info{
-    font-family: var(--font-dark-grotesque);
-    font-size: var(--fs-xs);
+    font-family: var(--font-darker-grotesque);
+    font-size: var(--fs-base);
     color: var(--color-bg-dark-gray);
     margin-bottom: 12px;
     display: block;
