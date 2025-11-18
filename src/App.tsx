@@ -16,6 +16,8 @@ import ComunidadeDetalhes from "./pages/ComunidadeDetalhes/ComunidadeDetalhes";
 import MinhasComunidades from "./pages/MinhasComunidades/MinhasComunidades";
 import CriarComunidade from "./pages/CriarComunidade/CriarComunidade";
 import SucessoComunidade from "./pages/SucessoComunidade/SucessoComunidade";
+import EditarComunidade from "./pages/EditarComunidade/EditarComunidade";
+import SucessoEditarComunidade from "./pages/SucessoEditarComunidade/SucessoEditarComunidade";
 function App() {
 
   return (
@@ -29,17 +31,20 @@ function App() {
           <Route path="/comunidade" element={<Comunidade />} />
           <Route path="/comunidade/:id" element={<ComunidadeDetalhes />} />
           <Route path="/minhas-comunidades" element={<MinhasComunidades />} />
-          <Route path="/criar-comunidades" element={<CriarComunidade />} />
+          <Route path="/criar-comunidade" element={<CriarComunidade />} />
+          <Route path="/editar-comunidade/:id" element={<EditarComunidade />} />
           <Route path="/dicas" element={<Educacional />} />
           <Route path="/criar-denuncia" element={<CriarDenuncia />}></Route>
           <Route path="/editar-denuncia/:id" element={<EditarDenuncia />}></Route>
           <Route path="/contatos" element={<Contatos />}></Route>
+          
         </Route>
 
 
         <Route path="/sucesso-denuncia" element={<SucessoDenuncia />}></Route>
         <Route path="/sucesso-editar" element={<SucessoEditar />}></Route>
         <Route path="/sucesso-comunidade" element={<SucessoComunidade />}></Route>
+        <Route path="/sucesso-editar-comunidade" element={<SucessoEditarComunidade />}></Route>
       </Routes>
 
     </>

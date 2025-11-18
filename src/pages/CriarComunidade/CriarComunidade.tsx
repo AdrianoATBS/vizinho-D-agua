@@ -7,8 +7,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 type DadosComunidade ={
-    nome: string;
-    descricao: string;
+    title: string;
+    description: string;
 }
 
 
@@ -16,8 +16,8 @@ export default function CriarComunidade() {
     const voltar = useNavigate();
 
     const [dados, setDados] = useState<DadosComunidade>({
-        nome: "",
-        descricao: ""
+        title: "",
+        description: ""
     });
 
     const handleMudanca = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -40,21 +40,23 @@ export default function CriarComunidade() {
         <FormularioTexto
         label="Nome da Comunidade"
         placeholder="Defina o  título da comunidade"
-        name="nome"
-        value={dados.nome}
+        name="title"
+        value={dados.title}
         onChange={handleMudanca}/>
 
         <FormularioTexterea
         label="Descrição da Comunidade"
         placeholder="Faça uma breve descrição a respeito da temática da comunidade"
-        name="descricao"
-        value={dados.descricao}
+        name="description"
+        value={dados.description}
         onChange={handleMudanca}
         />
         <div className="formulario-grupo">
             <label className="formulario-label">Adicionar Foto de Capa: </label>
             <div className="anexo-placeholder">
                 <IconAnexo />
+                <input type="file" className="input-file-hidden"></input>
+
             </div>
         </div>
         <Botao type="submit" variante="primario">Criar comunidade</Botao>
