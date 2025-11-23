@@ -9,24 +9,32 @@ import CardComunidade from "../../components/CardComunidade/CardComunidade";
 export default function Comunidade() {
     const abasDaPagina = ["Explorar", "Seguindo"];
     const[abaAtiva, setAbaAtiva] = useState(abasDaPagina[0]);
+    const [busca, setBusca] = useState("");
 
     function filtrarComunidade(lista: Comunidade[], aba: string) {
-        if(aba === "Explorar") return lista.filter(c => !c.isSeguindo);
-        if(aba === "Seguindo") return lista.filter(c => c.isSeguindo);
-        return lista;
+        const filtroBusca = (comunidade: Comunidade) => comunidade.title.toLowerCase().includes(busca.toLowerCase());
+
+        if(aba === "Explorar") return lista.filter(c => !c.isSeguindo && filtroBusca(c));
+        if(aba === "Seguindo") return lista.filter(c => c.isSeguindo && filtroBusca(c));
+        return lista.filter(filtroBusca);
     }
     const comunidadesFiltradas = filtrarComunidade(mockComunidades, abaAtiva);
+
+    function handleTrocarAba(novaAba: string) {
+        setAbaAtiva(novaAba);
+        setBusca("");
+    }
 
     return (
         <>
             <BarraTopo
             title="Comunidades"
             iconType="menu" />
-            <Busca placeholder="Buscar por uma comunidade" />
+            <Busca placeholder="Buscar por uma comunidade" onSearch={(valor) => setBusca(valor)} />
             <nav>
             <Abas listaDeAbas={abasDaPagina}
             abaAtiva={abaAtiva}
-            onAbaClick={setAbaAtiva} />
+            onAbaClick={handleTrocarAba} />
             </nav>
             <section className="lista-comunidades-container">
                 {comunidadesFiltradas.map(comunidade =>

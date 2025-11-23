@@ -9,18 +9,20 @@ export default function Dicas() {
     const abasDaPagina = ["Todos", "Videos", "Documentos"];
 
     const [abaAtiva, setAbaAtiva] = useState(abasDaPagina[0]);
+    const [busca, setBusca] = useState("");
 
     const dicasFiltradas = mockDicas.filter((dica: Dica) =>{
-        if(abaAtiva === "Videos")
-        {
-            return dica.contentType === "Video";
-        }
-        if(abaAtiva === "Documentos")
-        {
-            return dica.contentType === "Documento";
-        }
-        return true;
+        const filtroAba = abaAtiva === "Videos" ? dica.contentType === "Video" : 
+        abaAtiva === "Documentos" ? dica.contentType === "Documento" : true;
+
+        const filtroBusca = dica.title.toLowerCase().includes(busca.toLowerCase());
+        return filtroAba && filtroBusca;
     });
+
+    function handleTrocarAba(novaAba: string) {
+        setAbaAtiva(novaAba);
+        setBusca("");
+    }
 
     return (
         <>
@@ -28,11 +30,12 @@ export default function Dicas() {
             title="Dicas"
             iconType="menu"
             />
-            <Busca placeholder="Buscar conteúdo especifico" />
+            <Busca placeholder="Buscar conteúdo especifico"
+             onSearch={(valor) => setBusca(valor)} />
             <nav>
             <Abas listaDeAbas={abasDaPagina}
             abaAtiva={abaAtiva} 
-            onAbaClick={setAbaAtiva}
+            onAbaClick={handleTrocarAba}
             />
             </nav>
             <section className="lista-dicas-container">
