@@ -41,6 +41,7 @@ export default function ModalDetalhes({ denuncia, onClose }: ModalDetalhesProps)
 
                     <div className="modal-grupo">
                         <strong>Anexos: </strong>
+                        {denuncia.attachments && denuncia.attachments.length > 0 && (
                         <div className="modal-anexos">
                            {denuncia.attachments?.map((anexoUrl, index) => (
                                 <img 
@@ -50,6 +51,7 @@ export default function ModalDetalhes({ denuncia, onClose }: ModalDetalhesProps)
                                 />
                            ))}
                         </div>
+                        )}
                     </div>
 
                 </div>
