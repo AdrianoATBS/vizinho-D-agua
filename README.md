@@ -34,7 +34,6 @@ O projeto segue a metodologia **mobile-first**, garantindo melhor experiência e
 - **React 18**
 - **TypeScript**
 - **Vite**
-- **Redux**
 - **React Router DOM**
 - **CSS Modules**
 - **Arquitetura modular** (`components` / `pages` / `hooks`)
